@@ -1,11 +1,3 @@
----
-order: 0
----
-TEST UPDATE
-TEST UPDATE 2
-TEST UPDATE 3
-TEST UPDATE 4
-
 # Getting Started
 
 In this tutorial, you will build a functional [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) application and, in the process, learn the basic concepts and structures of the SDK. The example will showcase how quickly and easily you can **build your own blockchain from scratch** on top of the Cosmos SDK.
