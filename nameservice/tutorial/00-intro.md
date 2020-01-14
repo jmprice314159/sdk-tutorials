@@ -1,15 +1,16 @@
-﻿---
+---
 order: 0
 ---
 TEST UPDATE
 TEST UPDATE 2
 TEST UPDATE 3
+TEST UPDATE 4
 
 # Getting Started
 
 In this tutorial, you will build a functional [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) application and, in the process, learn the basic concepts and structures of the SDK. The example will showcase how quickly and easily you can **build your own blockchain from scratch** on top of the Cosmos SDK.
 
-By the end of this tutorial you will have a functional `nameservice` application, a mapping of strings to other strings (`map[string]string`). This is similar to [Namecoin](https://namecoin.org/), [ENS](https://ens.domains/), or [Handshake](https://handshake.org/), which all model the traditional DNS systems (`map[domain]zonefile`). Users will be able to buy unused names, or sell/trade their name.
+By the end of this tutorial you will have a functional `nameservice` application, a mapping of strings to other strings�(`map[string]string`). This is similar to [Namecoin](https://namecoin.org/), [ENS](https://ens.domains/), or [Handshake](https://handshake.org/), which all model the traditional DNS systems (`map[domain]zonefile`). Users will be able to buy unused names, or sell/trade their name.
 
 All of the final source code for this tutorial project is in this directory (and compiles). However, it is best to follow along manually and try building the project yourself!
 
@@ -26,41 +27,41 @@ Through the course of this tutorial you will create the following files that mak
 
 ```bash
 ./nameservice
-├── Makefile
-├── Makefile.ledger
-├── app.go
-├── cmd
-│   ├── nscli
-│   │   └── main.go
-│   └── nsd
-│       └── main.go
-├── go.mod
-├── go.sum
-└── x
-    └── nameservice
-        ├── alias.go
-        ├── client
-        │   ├── cli
-        │   │   ├── query.go
-        │   │   └── tx.go
-        │   └── rest
-        │       ├── query.go
-        │       ├── rest.go
-        │       └── tx.go
-        ├── genesis.go
-        ├── handler.go
-        ├── internal
-        │   ├── keeper
-        │   │   ├── keeper.go
-        │   │   └── querier.go
-        │   └── types
-        │       ├── codec.go
-        │       ├── errors.go
-        │       ├── key.go
-        │       ├── msgs.go
-        │       ├── querier.go
-        │       └── types.go
-        └── module.go
+??? Makefile
+??? Makefile.ledger
+??? app.go
+??? cmd
+?�� ??? nscli
+?�� ?�� ??? main.go
+?�� ??? nsd
+?��     ??? main.go
+??? go.mod
+??? go.sum
+??? x
+    ??? nameservice
+        ??? alias.go
+        ??? client
+        ?�� ??? cli
+        ?�� ?�� ??? query.go
+        ?�� ?�� ??? tx.go
+        ?�� ??? rest
+        ?��     ??? query.go
+        ?��     ??? rest.go
+        ?��     ??? tx.go
+        ??? genesis.go
+        ??? handler.go
+        ??? internal
+        ?�� ??? keeper
+        ?�� ?�� ??? keeper.go
+        ?�� ?�� ??? querier.go
+        ?�� ??? types
+        ?��     ??? codec.go
+        ?��     ??? errors.go
+        ?��     ??? key.go
+        ?��     ??? msgs.go
+        ?��     ??? querier.go
+        ?��     ??? types.go
+        ??? module.go
 ```
 
 Start by creating a new git repository:
